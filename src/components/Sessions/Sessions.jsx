@@ -20,7 +20,7 @@ export default function Sessions() {
     getAllSessions();
   }, []);
   return (
-    <div className="container">
+    <div className="container" id="courses">
       <Accordion defaultActiveKey="0">
         {allSessions?.map((se, i) => (
           <Accordion.Item eventKey={`${i}`} key={i}>
@@ -46,10 +46,10 @@ export default function Sessions() {
                   <a
                     href={d}
                     target="_blank"
-                    className="d-flex align-items-center text-decoration-none fs-1 text-success"
+                    className="d-flex align-items-center text-decoration-none text-success"
                     rel="noreferrer"
                   >
-                    <PPTX /> Download {d.substring(d.lastIndexOf("/") + 1)}!!
+                    <PPTX /> <span className="fs-6">Download {d.substring(d.lastIndexOf("/") + 1)}!!</span>
                   </a>
                 </div>
               ))}
