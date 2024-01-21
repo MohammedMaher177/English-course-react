@@ -7,7 +7,7 @@ export default function DocsReader() {
       <DocViewer
         documents={[
           {
-            uri: "https://res.cloudinary.com/divbski6g/raw/upload/v1704013198/English-course/24-12/docs/personality-adjectives-presentation_88981_eypzpw.pptx",
+            uri: "https://collection.cloudinary.com/divbski6g/ed49afd711e65c1840b9799a1f2ded7b",
           },
         ]}
         pluginRenderers={DocViewerRenderers}

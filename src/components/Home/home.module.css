@@ -1,7 +1,8 @@
 .home {
-  min-height: 100vh;
+  min-height: 50vh;
   background-image: url(../assets/bg22.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 4rem;
 }

@@ -2,3 +2,10 @@
   width: 100%;
   max-width: 50rem;
 }
+
+#courses {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
