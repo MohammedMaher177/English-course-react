@@ -2,10 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import styles from "./sessions.module.css";
-import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
-import DocsReader from "../DocsReader/DocsReader.jsx";
 import PPTX from "../Icons/PPTX.jsx";
 import Loading from "../Loading/Loading.jsx";
+import PDFIcon from "../Icons/PDFIcon.jsx";
+
 export default function Sessions() {
   const [loading, setLoading] = useState(true);
   const [allSessions, setAllSessions] = useState([]);
@@ -18,11 +18,7 @@ export default function Sessions() {
     setAllSessions(sessions);
     setLoading(false);
   };
-  const docs = [
-    {
-      uri: "https://collection.cloudinary.com/divbski6g/ed49afd711e65c1840b9799a1f2ded7b",
-    },
-  ];
+
   useEffect(() => {
     getAllSessions();
   }, []);
@@ -67,20 +63,19 @@ export default function Sessions() {
                     </a>
                   </div>
                 ))}
+                {se.PDFs.map((d, i) => (
+                  <div key={i} className="d-flex w-100">
+                    <PDFIcon />
+                    <div className="mx-2 d-flex align-items-center">
+                      <a target="_blank" href={d} className={styles.link}>
+                      {d.substring(d.lastIndexOf("/") + 1)}
+                      </a>
+                    </div>
+                  </div>
+                ))}
               </Accordion.Body>
             </Accordion.Item>
           ))}
-          {/* <DocsReader /> */}
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
-              <span className="fs-2 text-danger">
-                Session: Wednesday 03/01/2024
-              </span>
-            </Accordion.Header>
-            <Accordion.Body>
-              <span className="fs-2 text-danger">NOT FOUND YET</span>
-            </Accordion.Body>
-          </Accordion.Item>
         </Accordion>
       )}
     </div>

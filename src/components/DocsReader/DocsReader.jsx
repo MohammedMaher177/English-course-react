@@ -1,17 +1,18 @@
 import React from "react";
-import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
+import PDFIcon from "../Icons/PDFIcon.jsx";
 
-export default function DocsReader() {
+const DocsReader = () => {
   return (
     <div>
-      <DocViewer
-        documents={[
-          {
-            uri: "https://collection.cloudinary.com/divbski6g/ed49afd711e65c1840b9799a1f2ded7b",
-          },
-        ]}
-        pluginRenderers={DocViewerRenderers}
-      />
+      <PDFIcon />
+      <div className="col-md-4 col-sm-12 col-xs-12 text-right wow fadeInRight animated animated">
+        <a target="_blank" href="#">
+          Technical_Task.pdf
+        </a>
+        <span>23.09 MB</span>
+      </div>
     </div>
   );
-}
+};
+
+export default DocsReader;

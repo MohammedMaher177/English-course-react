@@ -9,3 +9,15 @@
   align-items: center;
   justify-content: center;
 }
+.link {
+  text-decoration: none;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+
+  color: #616363;
+}
